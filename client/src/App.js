@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './components/App.css';
+import Header from './components/header';
+import VerticalTabs from './components/sidetab';
 
 class App extends Component {
   constructor(props) {
@@ -20,10 +22,13 @@ class App extends Component {
 
   render(){
     return (
+      <>
       <div className="App">
-        
+        <Header />
         <p className="App-intro">{this.state.apiResponse}</p>
       </div>
+      <VerticalTabs />
+      </>
       );
     }
 }

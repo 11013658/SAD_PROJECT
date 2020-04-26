@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-grid-gallery": "^0.5.5",
+    "react-justified-grid": "^1.0.0",
+    "react-scripts": "3.4.1",
+    "react-sidebar": "^3.0.2",
+    "react-window-size": "^1.2.2",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
