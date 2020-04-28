@@ -1,9 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
+import { GridList, GridListTile, GridListTileBar, IconButton, Container } from '@material-ui/core';
 import ag from './images/ag.jpg';
 import adam from './images/adam.jpg';
 import cam from './images/cam.jpg';
@@ -14,7 +11,6 @@ import sm from './images/sm.jpg';
 import snake from './images/snake.jfif';
 import taylor from './images/taylor.jpg';
 import selena from './images/selena.jpg';
-import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {

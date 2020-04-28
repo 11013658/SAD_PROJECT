@@ -11,9 +11,7 @@ import thunder from './audios/Thunder.mp3';
 import youbelongwithme from './audios/you-belong-with-me.mp3';
 import believerimg from './images/believer.jpg';
 import blankspaceimg from './images/blankspace.jpg';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-
+import { Button, Container } from '@material-ui/core';
 
 
 class Believer extends React.Component {
@@ -63,7 +61,6 @@ class Believer extends React.Component {
 	}
 
 	render() {
-		
 		return (
         <div>
             <Container maxWidth="sm">
