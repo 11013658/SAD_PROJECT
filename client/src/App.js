@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './components/App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Header from './components/header';
 import Navbar from 'react-bootstrap/Navbar';
 import Home from './components/home';
@@ -35,7 +35,6 @@ class App extends Component {
             </div>
       </Navbar>
       </div>
-      
       
       <Route path="/home" exact component={Home} />
       <Route path="/artists" exact component={Artist} />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import backgroundImg from './images/header.jpg';
+import backgroundImg from './images/h.jpg';
 
 
 class Header extends Component {
@@ -8,7 +8,8 @@ class Header extends Component {
         return ( 
             <>
             <div className="header">
-                <img src={backgroundImg} />            
+                <img src={backgroundImg}/> 
+                <h1> Euphona </h1>           
             </div>
             </>
          );
