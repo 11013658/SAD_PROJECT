@@ -1,44 +1,34 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Button, Container } from '@material-ui/core';
+import LockOpenSharpIcon from '@material-ui/icons/LockOpenSharp';
+import AssignmentSharpIcon from '@material-ui/icons/AssignmentSharp';
+import headphones from '../images/headphones.jpg';
 
 
 class Landing extends Component {
-  render() {
+  render() {    
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <>
+      <div className="App">
         <div className="row">
-          <div className="col s12 center-align">
-            
+        <Container maxWidth="sm">   
             <br />
-            <div className="col s6">
-              <Link
-                to="/register"
-                style={{
-                  width: "140px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px"
-                }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              >
-                Register
-              </Link>
-            </div>
-            <div className="col s6">
-              <Link
-                to="/login"
-                style={{
-                  width: "140px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px"
-                }}
-                className="btn btn-large btn-flat waves-effect white black-text"
-              >
-                Log In
-              </Link>
-            </div>
-          </div>
+            <br />     
+            <img src={headphones} class="center" /> 
+            <br />
+            <br />
+            <Button startIcon={<AssignmentSharpIcon />} size="large" variant="outlined" color="primary">
+            <Link to='/register'> Register </Link>
+            </Button>
+            <span>               </span>
+            <Button startIcon={<LockOpenSharpIcon />} size="large" variant="outlined" color="primary">
+            <Link to='/login'> Login </Link>
+            </Button>
+        </Container>
         </div>
       </div>
+      </>
     );
   }
 }

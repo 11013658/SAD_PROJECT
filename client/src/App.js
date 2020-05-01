@@ -20,13 +20,17 @@ import Dashboard from "./components/dashboard/Dashboard";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
+
   // Set auth token header auth
   const token = localStorage.jwtToken;
   setAuthToken(token);
+
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
+
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
+
 // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
@@ -50,8 +54,6 @@ class App extends Component {
 
       <div className="container">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <a class="navbar-brand" target="_blank">
-            </a>
             <Link to="/" className="navbar-brand">Euphona</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
@@ -82,4 +84,5 @@ class App extends Component {
       );
     }
 }
+
 export default App;

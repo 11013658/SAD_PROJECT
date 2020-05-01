@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
+import { Button, Container } from '@material-ui/core';
+import LockOpenSharpIcon from '@material-ui/icons/LockOpenSharp';
+
 class Login extends Component {
   constructor() {
     super();
@@ -94,6 +97,11 @@ return (
                   {errors.passwordincorrect}
                 </span>
               </div>
+
+              <Button startIcon={<LockOpenSharpIcon />} size="large" variant="outlined" color="primary">
+                  Login 
+              </Button>
+
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{

@@ -62,7 +62,7 @@ class Believer extends React.Component {
 
 	render() {
 		return (
-        <div>
+        <div className="row">
             <Container maxWidth="sm">
             <h3>Imagine Dragons - Believer</h3>
                 <img src={believerimg} height="200" width="200" />

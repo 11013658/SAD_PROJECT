@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Tabs, Tab, Typography, Box} from '@material-ui/core';
-import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import HomeIcon from '@material-ui/icons/Home';
-import ImageGridList from './grid';
 import Believer from './believer';
 import Blankspace from './blankspace';
 
