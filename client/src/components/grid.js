@@ -1,14 +1,14 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { GridList, GridListTile, GridListTileBar, IconButton, Container } from '@material-ui/core';
-import ag from './images/ag.jpg';
+import luis from './images/luis.jpg';
 import adam from './images/adam.jpg';
-import cam from './images/cam.jpg';
-import riri from './images/riri.jpg';
-import ed from './images/ed.jpg';
-import liam from './images/liam.jpg';
-import sm from './images/sm.jpg';
-import snake from './images/snake.jfif';
+import yankee from './images/yankee.jpg';
+import cardi from './images/cardi.jpg';
+import beiber from './images/beiber.jpg';
+import imagine from './images/ImagineDragons.jpg';
+import alan from './images/alan-walker.jpg';
+import snake from './images/snake.jpg';
 import taylor from './images/taylor.jpg';
 import selena from './images/selena.jpg';
 
@@ -26,34 +26,25 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const tileData = [
-       {
-         img: ag,
-         title: 'Ariana Grande',
-         featured: true,
-       },
-       {
-        img: cam,
-        title: 'Camilla Cabello',
-        featured: true,
-      },
+     
        {
         img: adam,
          title: 'Adam Levine',
          featured: true, 
        },
       {
-       img: riri,
-        title: 'Rihanna',
+       img: cardi,
+        title: 'Cardi B',
         featured: true, 
       },
       {
-        img: ed,
-        title: 'Ed Sheeran',
+        img: beiber,
+        title: 'Justin Beiber',
         featured: true,
       },
       {
-       img: liam,
-        title: 'Liam Payne',
+       img: imagine,
+        title: 'Imagine Dragons',
         featured: true, 
       },
       {
@@ -62,8 +53,8 @@ const tileData = [
         featured: true,
       },
       {
-       img: sm,
-        title: 'Shawn Mendes',
+       img: alan,
+        title: 'Alan Walker',
         featured: true, 
       },
       {
@@ -74,6 +65,16 @@ const tileData = [
        {
         img: taylor,
          title: 'Taylor Swift',
+         featured: true, 
+       },
+       {
+        img: yankee,
+         title: 'Daddy Yankee',
+         featured: true, 
+       },
+       {
+        img: luis,
+         title: 'Luis Fonsi',
          featured: true, 
        },
      ];
