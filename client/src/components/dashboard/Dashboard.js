@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { connect, Provider } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import ExitToAppSharpIcon from '@material-ui/icons/ExitToAppSharp';
+import { Button } from '@material-ui/core';
+
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -10,34 +13,19 @@ class Dashboard extends Component {
 render() {
     const { user } = this.props.auth;
 return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
+        <div className="logout">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
-              </p>
+              <span> Are you sure you want to logout? </span>
             </h4>
-            <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-            >
-              Logout
-            </button>
-          </div>
+            <Button onClick={this.onLogoutClick} startIcon={<ExitToAppSharpIcon />} size="large" variant="outlined" color="secondary">
+                  Logout 
+            </Button>
         </div>
-      </div>
     );
   }
 }
+
 Dashboard.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
@@ -45,6 +33,7 @@ Dashboard.propTypes = {
 const mapStateToProps = state => ({
   auth: state.auth
 });
+
 export default connect(
   mapStateToProps,
   { logoutUser }

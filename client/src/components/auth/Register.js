@@ -3,7 +3,11 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+import { Button} from '@material-ui/core';
+import AssignmentSharpIcon from '@material-ui/icons/AssignmentSharp';
 import classnames from "classnames";
+
+
 class Register extends Component {
   constructor() {
     super();
@@ -116,20 +120,10 @@ return (
                 <label htmlFor="password2">Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Sign up
-                </button>
-              </div>
+
+              <Button type="submit" startIcon={<AssignmentSharpIcon />} size="large" variant="outlined" color="primary">
+                  Register 
+              </Button>    
             </form>
           </div>
         </div>

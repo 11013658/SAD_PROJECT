@@ -1,10 +1,23 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Tabs, Tab, Typography, Box} from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
-import Believer from './believer';
-import Blankspace from './blankspace';
+import Believer from './tracks/believer';
+import Blankspace from './tracks/blankspace';
+import { Button } from '@material-ui/core';
+import ExitToAppSharpIcon from '@material-ui/icons/ExitToAppSharp';
+import AlbumIcon from '@material-ui/icons/Album';
+import ImageGridList from './grid';
+import Youbelong from './tracks/youbelong';
+import On from './tracks/on';
+import Thunder from './tracks/thunder';
+import Taki from './tracks/taki';
+import Girls from './tracks/girls';
+import Faded from './tracks/faded';
+import Despacito from './tracks/despacito';
+import Letme from './tracks/letme';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,7 +70,14 @@ export default function Home() {
   };
 
   return (
+    <>
+    <div className="App"> 
+      <Button startIcon={<ExitToAppSharpIcon />} size="large" variant="outlined" color="secondary">
+        <Link to='/dashboard'> Want to logout? </Link>
+      </Button>
+    </div>
     <div className={classes.root}>
+      
       <Tabs
         orientation="vertical"
         variant="standard"
@@ -66,13 +86,26 @@ export default function Home() {
         className={classes.tabs}
       >
         <Tab label="Home" icon={<HomeIcon />} {...a11yProps(0)} />
+        <Tab label="Artists" icon={<AlbumIcon />} {...a11yProps(0)} />
       </Tabs>
       
       <TabPanel value={value} index={0}>
         <Believer />
         <Blankspace />
+        <Despacito />
+        <Faded />
+        <Girls />
+        <Letme />
+        <On />
+        <Taki />
+        <Thunder />
+        <Youbelong />
       </TabPanel>
             
+      <TabPanel value={value} index={1}>
+        <ImageGridList />
+      </TabPanel>
     </div>
+    </>
   );
 }

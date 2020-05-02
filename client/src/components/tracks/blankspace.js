@@ -1,20 +1,11 @@
 import React, { Component } from "react";
-import believer from './audios/believer.mp3';
-import blankspace from './audios/blank-space.mp3';
-import despacito from './audios/despacito.mp3';
-import faded from './audios/faded.mp3';
-import girlslikeyou from './audios/girls-like-you.mp3';
-import letmeloveyou from './audios/let-me-love-you.mp3';
-import onmyway from './audios/on-my-way.mp3';
-import takitaki from './audios/taki-taki.mp3';
-import thunder from './audios/Thunder.mp3';
-import youbelongwithme from './audios/you-belong-with-me.mp3';
-import believerimg from './images/believer.jpg';
-import blankspaceimg from './images/blankspace.jpg';
-import { Button, Container } from '@material-ui/core';
+import blankspace from '../audios/blank-space.mp3';
+import blankspaceimg from '../images/blankspace.jpg';
+import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 
 
-class Believer extends React.Component {
+class Blankspace extends React.Component {
 	constructor(props) {
 		super(props);
 		
@@ -61,14 +52,15 @@ class Believer extends React.Component {
 	}
 
 	render() {
+		
 		return (
-        <div className="row">
+        <div>
             <Container maxWidth="sm">
-            <h3>Imagine Dragons - Believer</h3>
-                <img src={believerimg} height="200" width="200" />
-                <span>          </span>
+            <h3>Taylor Swift - Blank Space</h3>
+			<img src={blankspaceimg} height="200" width="200" />
+                <span>       </span>
                 <audio ref= {(audio)=>{this.audio=audio}}>
-                    <source src={believer} />
+                    <source src={blankspace} />
                 </audio>
                 <Button onClick={this.handlePlay.bind(this)} variant="outlined" color="primary">
                     Play
@@ -77,19 +69,16 @@ class Believer extends React.Component {
                 <Button onClick={this.handleStop.bind(this)} variant="outlined" color="secondary">
                     Stop
                 </Button>
-                <span>          </span>
+			    <span>          </span>
                 <input ref={(slider) => { this.slider = slider }}
                     type="range"
                     name="points"
-                    min="0" max={this.state.duration} />
+                    min="0" max={this.state.duration} /> 
             </Container>
-
-
-			
 
 		</div>
         );
 	}
 }
 
-export default Believer;
+export default Blankspace;

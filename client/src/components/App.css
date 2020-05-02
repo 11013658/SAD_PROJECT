@@ -3,6 +3,11 @@
   align-items: center;
   
 }
+.logout {
+  text-align: center;
+  align-items: center;
+  
+}
 .center {
   display: block;
   margin-left: auto;
@@ -20,6 +25,8 @@
     justify-content: center;
     text-align: center;
     height: auto;
+    font-weight: bold;
+    font-size: 10px;
     
   
 }

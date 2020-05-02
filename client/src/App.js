@@ -3,9 +3,7 @@ import './components/App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Header from './components/header';
-import Navbar from 'react-bootstrap/Navbar';
 import Home from './components/home';
-import Artist from './components/artist';
 import Landing from './components/layout/Landing';
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -52,33 +50,17 @@ class App extends Component {
         <p className="App-intro"></p>
       </div>
 
-      <div className="container">
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Link to="/" className="navbar-brand">Euphona</Link>
-            <div className="collpase navbar-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="navbar-item">
-                  <Link to="/home" className="nav-link">Home</Link>
-                </li>
-                <li className="navbar-item">
-                  <Link to="/artists" className="nav-link">Artists</Link>
-                </li>
-              </ul>
-            </div>
-      </Navbar>
-      </div>
-
       <Provider store={store}>
         <Route exact path="/" component={Landing} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/home" component={Home} />
         <Switch>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
         </Switch>
       </Provider>
 
-      <Route path="/home" exact component={Home} />
-      <Route path="/artists" exact component={Artist} />
+    
       </Router>
       </>
       );

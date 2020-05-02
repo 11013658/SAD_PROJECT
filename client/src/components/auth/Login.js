@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { Button, Container } from '@material-ui/core';
+import { Button} from '@material-ui/core';
 import LockOpenSharpIcon from '@material-ui/icons/LockOpenSharp';
 
 class Login extends Component {
@@ -20,12 +20,12 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/home");
+      this.props.history.push("/dashboard");
     }
   }
 componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard"); // push user to dashboard when they login
+      this.props.history.push("/home"); // push user to dashboard when they login
     }
 if (nextProps.errors) {
       this.setState({
@@ -98,24 +98,11 @@ return (
                 </span>
               </div>
 
-              <Button startIcon={<LockOpenSharpIcon />} size="large" variant="outlined" color="primary">
+              <Button type="submit" startIcon={<LockOpenSharpIcon />} size="large" variant="outlined" color="primary">
                   Login 
               </Button>
 
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Login
-                </button>
-              </div>
+              
             </form>
           </div>
         </div>

@@ -9,7 +9,8 @@ class Header extends Component {
             <>
             <div className="header">
                 <img src={backgroundImg}/> 
-                <h1> Euphona </h1>           
+                <br />
+                <h1> Ḛ℧⍴ℋ◍ทậ ♬</h1>           
             </div>
             </>
          );
