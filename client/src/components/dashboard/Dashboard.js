@@ -16,6 +16,7 @@ return (
         <div className="logout">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
+              <br />
               <span> Are you sure you want to logout? </span>
             </h4>
             <Button onClick={this.onLogoutClick} startIcon={<ExitToAppSharpIcon />} size="large" variant="outlined" color="secondary">
