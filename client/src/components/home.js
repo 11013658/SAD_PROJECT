@@ -96,9 +96,9 @@ export default function Home() {
         <Faded />
         <Girls />
         <Letme />
-        <On />
-        <Taki />
+        <On />        
         <Thunder />
+        <Taki />
         <Youbelong />
       </TabPanel>
             

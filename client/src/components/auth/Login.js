@@ -44,6 +44,8 @@ const userData = {
     };
 this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
   };
+
+  
 render() {
     const { errors } = this.state;
 return (

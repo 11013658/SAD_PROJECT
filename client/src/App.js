@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './components/App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/header';
 import Home from './components/home';
 import Landing from './components/layout/Landing';
